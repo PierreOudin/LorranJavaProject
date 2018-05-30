@@ -1,0 +1,14 @@
+0 = vide
+1 = purse
+2 = lorann
+3 = crystal ball
+4 = fireball
+5 = gate closed
+6 = gate open
+7 = vertical bone
+8 = horizontal bone
+9 = bone
+A = monster 1
+B = monster 2
+C = monster 3
+D = monster 4
