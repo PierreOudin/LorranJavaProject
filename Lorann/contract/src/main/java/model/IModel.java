@@ -41,4 +41,6 @@ public interface IModel {
      *             the SQL exception
      */
     List<Example> getAllExamples() throws SQLException;
+
+	Example getExampleBychemin(String chemin) throws SQLException;
 }

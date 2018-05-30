@@ -24,12 +24,18 @@ public abstract class ExampleDAO extends AbstractDAO {
 
     /** The sql all examples. */
     private static String sqlAllExamples   = "{call findAllExamples()}";
+    
+    private static String sqlExempleBychemin = "{call findExempleBychemin()}";
+    
+	//private static String sqlExampleBychemin  = "{call findExampleBychemin";
 
     /** The id column index. */
-    private static int    idColumnIndex    = 1;
+    private static int   idColumnIndex     = 1;
 
     /** The name column index. */
-    private static int    nameColumnIndex  = 2;
+    private static int   nameColumnIndex   = 2; 
+    
+    private static int   cheminColumnIndex = 3;
 
     /**
      * Gets the example by id.
@@ -47,13 +53,13 @@ public abstract class ExampleDAO extends AbstractDAO {
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
-                example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex));
+				example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex), result.getString(cheminColumnIndex));
             }
             result.close();
         }
         return example;
     }
-
+    
     /**
      * Gets the example by name.
      *
@@ -71,13 +77,14 @@ public abstract class ExampleDAO extends AbstractDAO {
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
-                example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex));
+                example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex), result.getString(cheminColumnIndex));
             }
             result.close();
         }
         return example;
     }
 
+    
     /**
      * Gets the all examples.
      *
@@ -92,10 +99,28 @@ public abstract class ExampleDAO extends AbstractDAO {
             final ResultSet result = callStatement.getResultSet();
 
             for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
-                examples.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex)));
+                examples.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex), result.getString(cheminColumnIndex)));
             }
             result.close();
         }
         return examples;
     }
-}
+
+    
+    public static Example getExampleBychemin(final String chemin) throws SQLException {
+        final CallableStatement callStatement = prepareCall(sqlExempleBychemin);
+        Example example = null;
+
+        callStatement.setString(1, chemin);
+        if (callStatement.execute()) {
+            final ResultSet result = callStatement.getResultSet();
+            if (result.first()) {
+                example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex), result.getString(cheminColumnIndex));
+            }
+            result.close();
+        }
+        return example;
+    }
+
+    }
+
