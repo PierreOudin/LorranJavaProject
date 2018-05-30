@@ -38,6 +38,12 @@ public final class ModelFacade implements IModel {
         return ExampleDAO.getExampleByName(name);
     }
 
+    @Override
+    public Example getExampleBychemin(final String chemin) throws SQLException {
+        return ExampleDAO.getExampleBychemin(chemin);
+    }
+
+    
     /*
      * (non-Javadoc)
      * @see model.IModel#getAllExamples()
@@ -46,5 +52,6 @@ public final class ModelFacade implements IModel {
     public List<Example> getAllExamples() throws SQLException {
         return ExampleDAO.getAllExamples();
     }
+
 
 }

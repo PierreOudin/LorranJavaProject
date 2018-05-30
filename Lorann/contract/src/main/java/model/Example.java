@@ -14,6 +14,9 @@ public class Example {
     /** The name. */
     private String    name;
 
+	private String chemin;
+
+
     /**
      * Instantiates a new example.
      *
@@ -21,11 +24,13 @@ public class Example {
      *            the id
      * @param name
      *            the name
+     * @param chemin 
      */
-    public Example(final int id, final String name) {
+    public Example(final int id, final String name, final String chemin) {
         super();
         this.id = id;
         this.name = name;
+        this.chemin = chemin;
     }
 
     /**
@@ -55,6 +60,15 @@ public class Example {
     public void setName(final String name) {
         this.name = name;
     }
+    
+    public void setchemin(final String chemin) {
+    	this.chemin = chemin;
+    }
+    
+    public String getchemin() {
+    	return this.chemin;
+    }
+
 
     /*
      * (non-Javadoc)
@@ -62,6 +76,6 @@ public class Example {
      */
     @Override
     public String toString() {
-        return this.getId() + " : " + this.getName();
+        return this.getId() + " : " + this.getName() + " : " + this.getchemin();
     }
 }
