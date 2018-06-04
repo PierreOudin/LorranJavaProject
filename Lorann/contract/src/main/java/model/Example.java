@@ -20,16 +20,14 @@ public class Example {
     /**
      * Instantiates a new example.
      *
-     * @param id
-     *            the id
-     * @param name
+     * @param string
      *            the name
      * @param chemin 
      */
-    public Example(final int id, final String name, final String chemin) {
+    public Example(final int id, final String chemin, final String string) {
         super();
         this.id = id;
-        this.name = name;
+        this.name = string;
         this.chemin = chemin;
     }
 
@@ -76,6 +74,6 @@ public class Example {
      */
     @Override
     public String toString() {
-        return this.getId() + " : " + this.getName() + " : " + this.getchemin();
+        return /*this.getId() + " : " + */this.getName()/* + " : " + this.getchemin()*/;
     }
 }
