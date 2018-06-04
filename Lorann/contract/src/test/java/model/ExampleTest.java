@@ -21,7 +21,7 @@ public class ExampleTest {
 
     @Before
     public void setUp() throws Exception {
-        this.example = new Example(1, "Example test");
+        this.example = new Example(1, "Example test", null);
     }
 
     @After

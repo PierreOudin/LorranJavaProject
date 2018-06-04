@@ -53,5 +53,11 @@ public final class ModelFacade implements IModel {
         return ExampleDAO.getAllExamples();
     }
 
+	/*@Override
+	public Example getExampleById(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+*/
 
 }
