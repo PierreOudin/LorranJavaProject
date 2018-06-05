@@ -22,7 +22,7 @@ public class Moving extends ModelFacade {
 		return map;
 	}
 	
-	/**movement down of the object**/
+	/*movement down of the object*/
 	public static char[][] moveDown(int x, int y, char map[][])
 	{ 
 		char block = map[y][x]; 
@@ -32,7 +32,7 @@ public class Moving extends ModelFacade {
 	    return map;
 	} 
 	
-	/**movement to the left of the object**/
+	/*movement to the left of the object*/
 	public static char[][] moveLeft(int x, int y, char map [][]){ 
 
 	    char block = map[y][x]; 

@@ -11,7 +11,7 @@ import model.dao.ExampleDAO;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public final class ModelFacade implements IModel {
+public class ModelFacade implements IModel {
 
     /**
      * Instantiates a new model facade.
@@ -53,5 +53,11 @@ public final class ModelFacade implements IModel {
         return ExampleDAO.getAllExamples();
     }
 
+	/*@Override
+	public Example getExampleById(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+*/
 
 }

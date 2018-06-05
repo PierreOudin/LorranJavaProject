@@ -11,7 +11,7 @@ import model.Example;
 /**
  * <h1>The Class ExampleDAO.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Dorian BUQUET
  * @version 1.0
  */
 public abstract class ExampleDAO extends AbstractDAO {
@@ -106,7 +106,13 @@ public abstract class ExampleDAO extends AbstractDAO {
         return examples;
     }
 
-    
+    /**
+     * Gets the map
+     *
+     * @return the map
+     * @throws SQLException
+     *             the SQL exception
+     */
     public static Example getExampleBychemin(final String chemin) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExempleBychemin);
         Example example = null;

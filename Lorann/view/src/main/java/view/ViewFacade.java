@@ -17,13 +17,17 @@ public class ViewFacade implements IView {
         super();
     }
 
+   
+        
+       
     /*
      * (non-Javadoc)
      * @see view.IView#displayMessage(java.lang.String)
      */
     @Override
-    public final void displayMessage(final String message) {
+    public final String displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
+		return message;
     }
 
 }

@@ -2,6 +2,9 @@ package model;
 
 public class Enemy extends Moving {
 
+	
+	 /* Enemy 1 and 3 move on the right and if they can't they go forward*/
+	 
 	public void moveMobOneThree(int x, int y, char map[][])
 	{
 		if(map[y][x-32] == 0)
@@ -20,6 +23,9 @@ public class Enemy extends Moving {
 		}
 	}
 	
+	/*
+	 * Enemy 2 and 4 move on the right and if they can't they go forward
+	 */
 	public void moveMobTwoFour(int x, int y, char map[][])
 	{
 		if(map[y][x+32] == 0){
