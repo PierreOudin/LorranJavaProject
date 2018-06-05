@@ -35,7 +35,6 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
 
-	private BufferedImage image;
 
     /**
      * Instantiates a new controller facade.
@@ -60,54 +59,27 @@ public class ControllerFacade implements IController {
      *             the SQL exception
      */
     
-    public void Sprite(String image) {
-        try {
-            this.setImage(ImageIO.read(this.getClass().getClassLoader().getResourceAsStream(image)));
-        } catch (IOException e) {
-            System.err.println("Impossible to load the image"+image);
-            e.printStackTrace();
-        }
-    }
+
     
     public void start() throws SQLException {
     	
-        //String letter = this.getView().displayMessage();
+        /**String letter = this.getView().displayMessage();*/
     	String letter = this.getModel().getExampleById(1).toString();
 
-
+    	/**initialization off o */
 		int o = 0;
+		/**first @for used for drop the line 12 time*/
     	for (int i = 0 ; i < 12 ;i++)
         {
         	System.out.println("");
+        	/**second @for used for use the switch 20 times*/
         	for (int y = 0; y <20; y++) {
         
-                //System.out.print(this.getModel().getExampleById(1).toString().charAt(i));
-                
-                /*if(i>20) {
-                	System.out.println("");
-                }
-                
-                else {*/
-                	
-                
-                //this.getView().displayMessage(this.getModel().getExampleByName("2").toString());
 
-                /*final List<Example> examples = this.getModel().getAllExamples();
-                final StringBuilder message = new StringBuilder();
-                for (final Example example : examples) {
-                    message.append(example);
-                    message.append('\n');
-                }
-                this.getView().displayMessage(message.toString());*/
-         /*   }
-            public void Viewniveau() { */
-                
-                	//for (int i1 = 0; i1 > 20 ;) {
-                	//if (i = 20 || i = 40 || i = 60 || i = 80 || i = 100 || i = 120 || i = 140, i || 160 || i = 180 || i = 200 ) {
-                	 //   System.out.println(i);        	
-	
-        		//System.out.print(this.getModel().getExampleById(1).toString().charAt(o));	
-        	switch (this.getModel().getExampleById(1).toString().charAt(o)) {
+        		
+        		/**change here the number of the map (1,2,3,4...)*/
+        		/**switch for start the map*/
+        	switch (this.getModel().getExampleById(4).toString().charAt(o)) {
 
         case '0':
         	System.out.print("nothing");
@@ -127,7 +99,7 @@ public class ControllerFacade implements IController {
         case '5':
         	System.out.print("gate closed");
         	break;
-        case '6':
+        case '6': 
         	System.out.print("gate open");
         	break;
         case '7':
@@ -154,16 +126,13 @@ public class ControllerFacade implements IController {
         	
         default:
         	System.out.print("error");
-        	
-     
-        	//System.out.print(letter.charAt(i));
+                	
         }
         	o++;		
         }
         	
         }
-        
-        
+
         
     }
     /**

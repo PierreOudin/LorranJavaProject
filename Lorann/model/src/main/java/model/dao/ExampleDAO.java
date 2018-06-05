@@ -25,6 +25,7 @@ public abstract class ExampleDAO extends AbstractDAO {
     /** The sql all examples. */
     private static String sqlAllExamples   = "{call findAllExamples()}";
     
+    /** The sql example by chemin. */
     private static String sqlExempleBychemin = "{call findExempleBychemin()}";
     
 	//private static String sqlExampleBychemin  = "{call findExampleBychemin";
@@ -35,6 +36,7 @@ public abstract class ExampleDAO extends AbstractDAO {
     /** The name column index. */
     private static int   nameColumnIndex   = 2; 
     
+    /** The chemin column index. */
     private static int   cheminColumnIndex = 3;
 
     /**
@@ -106,7 +108,15 @@ public abstract class ExampleDAO extends AbstractDAO {
         return examples;
     }
 
-    
+    /**
+     * Gets the example by chemin.
+     *
+     * @param chemin
+     *            the chemin
+     * @return the example by chemin
+     * @throws SQLException
+     *             the SQL exception
+     */
     public static Example getExampleBychemin(final String chemin) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExempleBychemin);
         Example example = null;

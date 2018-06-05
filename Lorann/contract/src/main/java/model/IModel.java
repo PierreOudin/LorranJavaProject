@@ -42,5 +42,16 @@ public interface IModel {
      */
     List<Example> getAllExamples() throws SQLException;
 
+    /**
+     * Gets the examples by chemin.
+     *
+     * @param chemin
+     *            the chemin
+     * @return the example by chemin
+     * @throws SQLException
+     *             the SQL exception
+     */
 	Example getExampleBychemin(String chemin) throws SQLException;
+
+
 }
