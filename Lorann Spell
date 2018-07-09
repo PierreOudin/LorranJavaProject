@@ -1,0 +1,20 @@
+Lorann : attribut
+
+Point Position; Position de Lorann sur la map
+Point Direction; Direction dans laquelle regarde Lorann (le vecteur ne dépasse pas 1 ni -1 dans le cas où lorann recule)
+
+
+Sortilège : attribut
+
+Même variable que dans lorann
+Le sortilège récupére la position et la direction de lorann
+Le sortilège aura une fonction update pour faire avancer le sortilège
+Position.x + Direction.x
+Position.y + Direction.y
+Le controller check si le sortilège entre en colision avec quelque chose
+
+
+Si les mob entre en colision avec le sortilège alors d'abord supprimer le sortilège puis supprimer le mob
+Si le sortilège entre en contact avec une surface autre que le mob lui faire faire demi tour
+Si lorann entre en contact avec le sortilège alors faire disparaitre sortilège
+Tant que le sortièlge n'entre pas en contact faire +1 à la position du sortilège ou -1 en fonction de la direction
