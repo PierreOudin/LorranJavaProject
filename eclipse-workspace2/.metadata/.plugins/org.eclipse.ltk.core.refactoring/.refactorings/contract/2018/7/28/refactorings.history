@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;IController.java&apos; to &apos;controller/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;contract&apos;&#x0D;&#x0A;- Destination element: &apos;controller/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;controller.IController.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=controller/src\/main\/java" element1="/src\/main\/java&lt;controller{IController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1531123152818" units="1" version="1.0"/>
+</session>

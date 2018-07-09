@@ -1,0 +1,82 @@
+package view;
+
+import javax.swing.JOptionPane;
+
+/**
+ * <h1>The Class ViewFacade provides a facade of the View component.</h1>
+ *
+ * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @version 1.0
+ */
+public class ViewFacade implements IView {
+
+    /**
+     * Instantiates a new view facade.
+     */
+    public ViewFacade() {
+        super();
+    }
+
+ /*   public void Viewniveau() {
+        switch (letter) {
+        
+        case 0:
+        	System.out.println("nothing");
+        	break;
+        case 1:
+        	System.out.println("purse");
+        	break;
+        case 2: 
+        	System.out.println("lorann");
+        	break;
+        case 3: 
+        	System.out.println("crystall ball");
+        	break;
+        case 4: 
+        	System.out.println("fireball");
+        	break;
+        case 5:
+        	System.out.println("gate closed");
+        	break;
+        case 6:
+        	System.out.println("gate open");
+        	break;
+        case 7:
+        	System.out.println("vertical bone");
+        	break;
+        case 8:
+        	System.out.println("horizontal bone");
+        	break;
+        case 9:
+        	System.out.println("bone");
+        	break;
+		case A:
+        	System.out.println("monster 1");
+        	break;
+		case B:
+			System.out.println("monster 2");
+			break;	
+		case C:
+        	System.out.println("monster 3");
+        	break;
+		case D:
+        	System.out.println("monster 4");
+        	break;
+        	
+        default:
+        	System.out.println("error");
+        }
+        
+    }
+*/
+    
+    /*
+     * (non-Javadoc)
+     * @see view.IView#displayMessage(java.lang.String)
+     */
+    @Override
+    public final String displayMessage(final String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+
+}

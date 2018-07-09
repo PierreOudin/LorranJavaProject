@@ -1,0 +1,55 @@
+package controller;
+
+public class Level implements ILevel {
+
+    /**
+     * the number of the level
+     * If Lorann can exit the level
+     */
+    private int number;
+    private boolean exit = false;
+
+    private ArrayList<IEntity> entities;
+
+    /**
+     * The database ID of the level
+     */
+    private int id;
+
+    /**
+     * Interface of Element
+     */
+    private IElement elements[][];
+
+    /**
+     * Interface of hero
+     */
+
+    private IHero hero;
+
+    /**
+     * Interface of dimention
+     */
+    private IDimention dimention;
+
+    /**
+     * Indicate if the level is finished
+     */
+    private boolean finished;
+    
+
+    /**
+     * Localisation of elements
+     * @param width
+     * @param height
+     * @param hero
+     *
+     */
+    public Level(int id,int width, int height, Hero hero, int number) {
+        this.dimention = new Dimention(width,height);
+        this.hero = hero;
+        this.number = number;
+        this.elements = new Element[height][width];
+        this.entities = new ArrayList<IEntity>();
+        this.id = id;
+    }
